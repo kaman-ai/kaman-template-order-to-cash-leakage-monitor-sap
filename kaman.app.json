@@ -1,0 +1,26 @@
+{
+  "name": "Order-to-Cash Revenue Leakage Monitor (SAP)",
+  "agents": {
+    "extractor": "cad29d16-a9fd-59ca-af05-207f1d237fcd",
+    "recovery_agent": "5e4d8c04-43c0-522d-ae9c-c51a4a1dfcbe"
+  },
+  "workflows": {
+    "flow": "20b6cc3c-77c8-5300-aef2-e59d4b90d84a"
+  },
+  "scenarios": {
+    "desk": "38347974-8d9e-5d36-9857-848352f8737d"
+  },
+  "ui": {
+    "title": "Order-to-Cash Revenue Leakage Monitor (SAP)",
+    "tagline": "Finds revenue that leaks between order and cash in SAP S/4HANA: matches every delivery to its order and invoice in code (not by guesswork), flags unbilled deliveries, under-billing and unexplained credits, explains the root causes, and once finance agrees raises debit memo requests on billing block for the billing team to release.",
+    "run": "Run: Order-to-cash leakage check",
+    "chat": {
+      "agent": "extractor",
+      "title": "Ask the Order-to-Cash Extractor",
+      "suggestions": [
+        "Period 2026-09. These documents were read: orders [{order: SO1, line: 10, customer: C1, unit_price: 100}], deliveries [{order: SO1, line: 10, qty: 5}], invoices [], credit notes [{number: CN9, customer: C2, amount: 300, reason_code: null}]. Reply as instructed.",
+        "Pull order-to-cash documents for 2026-09, company 1000."
+      ]
+    }
+  }
+}
